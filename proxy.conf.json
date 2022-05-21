@@ -1,0 +1,7 @@
+{
+  "/api1/*": {
+    "target": "https://www.mmobomb.com",
+    "secure": false,
+    "changeOrigin": true
+  }
+}
