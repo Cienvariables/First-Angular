@@ -5,26 +5,30 @@ import { FooterComponent } from './components/footer/footer.component';
 import { RouterModule } from '@angular/router';
 import { HttpClientModule } from '@angular/common/http';
 import { GamesService } from './services/games/games.service';
-
-
+import { MatButtonModule } from '@angular/material/button';
+import { FormComponent } from '../shared/components/form/form.component';
 
 @NgModule({
   declarations: [
     HeaderComponent,
-    FooterComponent
+    FooterComponent,
+    FormComponent
   ],
   providers: [
-    GamesService
+    GamesService,
   ],
 
   imports: [
     CommonModule,
     RouterModule,
-    HttpClientModule
+    HttpClientModule,
+    MatButtonModule
+
   ],
   exports: [
     HeaderComponent,
     FooterComponent,
+    FormComponent
   ]
 })
 

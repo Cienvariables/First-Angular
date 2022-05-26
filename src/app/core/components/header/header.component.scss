@@ -1,0 +1,26 @@
+.btn-primary {
+  color: #fff;
+  background-color: teal;
+  border-color: #005a5a;
+}
+
+.btn-outline-primary {
+  color: teal;
+  background-color: transparent;
+  background-image: none;
+  border-color: teal;
+}
+
+.btn-outline-primary:hover {
+  color: #222;
+  background-color: #009a9a;
+  border-color: teal;
+}
+
+li {
+  margin: 2px 10px 12px 10px;
+}
+
+header {
+  padding: 0px 40px 0px 40px;
+}

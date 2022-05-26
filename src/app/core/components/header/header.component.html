@@ -1,5 +1,25 @@
-<!-- game-header -->
+<header class=" bg-dark text-success">
 
-<!-- get -->
+  <div class="row">
 
-<h1>>Games</h1>
+    <h1 class=" col-md-3 my-sm-2">Juegos</h1>
+    <ul class="nav col-md-4 my-sm-2 ">
+
+      <li class="nav-item">
+        <a class="btn btn-outline-primary my-sm-2 btn-sm col-xs-2" [routerLink]="['']">Home</a>
+      </li>
+      <li class="nav-item text-success">
+        <a class="btn btn-outline-primary my-sm-2 btn-sm col-xs-2" [routerLink]="['/games']">Todos</a>
+      </li>
+      <li class="nav-item text-success">
+        <a class="btn btn-outline-primary my-sm-2 btn-sm col-xs-2 " [routerLink]="['/games/:id']">Id???</a>
+      </li>
+    </ul>
+
+    <div class="col-lg-5 my-sm-2">
+      <app-form></app-form>
+    </div>
+  </div>
+
+
+</header>

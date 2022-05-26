@@ -12,14 +12,20 @@ export class GamesService {
 
   constructor(private myhttp: HttpClient) { }
 
-  // allgames
-  public getAllGames(): Observable<IGameResponse> {
-    return this.myhttp.get<IGameResponse>(`${environment.apiUrl}games`);
+
+  public getDetailGameId(id: string): Observable<IGameResponse> {
+    return this.myhttp.get<IGameResponse>(`${environment.apiUrl}game?id=${id}`);
   }
 
-  // public getGameById(id: number): Observable<GameInterface> {
-  //   return this.httpClient.get<GameInterface>(`${environment.apiUrl}games/${id}`);
-  // }
+  public searchCharacter(query = '', page = 1) {
+    const filter = `${environment.apiUrl}games?search=${query}&page=${page}`;
+    return this.myhttp.get<IGameResponse[]>(filter);
+  }
+  // le falta paginacion
 
+  // allgames
+  public getAllGames(): Observable<IGameResponse[]> {
+    return this.myhttp.get<IGameResponse[]>(`${environment.apiUrl}games`);
+  }
 
 }

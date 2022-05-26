@@ -7,12 +7,14 @@ import { GamesService } from './core/services/games/games.service';
   styleUrls: ['./app.component.scss'],
   providers: [GamesService]
 })
+
 export class AppComponent {
-  title = 'router-app';
+  // usuario: any;
+
   constructor(private gamesService: GamesService) { }
   ngOnInit() {
     this.gamesService.getAllGames().subscribe(res => {
-      console.log(res);
+      // console.log(res);
     });
   }
 }

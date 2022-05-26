@@ -1,7 +1,6 @@
 
-
 export interface GameInterface {
-  id: number;
+  id: string;
   title: string;
   thumbnail: string;
   short_description: string;
@@ -15,7 +14,7 @@ export interface GameInterface {
 }
 
 export interface IGameResponse {
-  id: number;
+  id: string;
   title: string;
   thumbnail: string;
   short_description: string;

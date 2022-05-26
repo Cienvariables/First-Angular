@@ -1,5 +1,8 @@
 <!-- input -->
-<div class="form-group">
-  <input class="input" type="text" placeholder="Busca" aria-label="Busca">
-  <button class="button" type="submit">Busca</button>
+<div class="input-group">
+  <span class="input-group-btn">
+    <input class=" form-control my-2 btn-group-sm" id="inputSearch" #inputSearch type="search" placeholder="Search"
+      (keyup)="onSearch(inputSearch.value)">
+  </span>
+  <button class="btn col-lg-2 btn-outline-success my-2 btn-group-sm " type="submit">Search....</button>
 </div>

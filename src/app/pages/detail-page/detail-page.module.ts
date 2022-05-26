@@ -1,25 +1,24 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { DetailPageRoutingModule } from './detail-page-routing.module';
+import { DetailPageComponent } from './detail-page.component';
 import { RouterModule } from '@angular/router';
-
-import { AllGamesRoutingModule } from './all-games-routing.module';
-import { AllGamesComponent } from './all-games.component';
 import { HttpClientModule } from '@angular/common/http';
+import { CardComponent } from 'src/app/shared/components/card/card.component';
 import { SharedModule } from 'src/app/shared/shared.module';
-// import { CardComponent } from 'src/app/shared/components/card/card.component';
-// GamesService
+//DetailService
 
 @NgModule({
   declarations: [
-    AllGamesComponent
-
+    DetailPageComponent,
+    CardComponent,
   ],
   imports: [
     CommonModule,
-    AllGamesRoutingModule,
+    DetailPageRoutingModule,
     RouterModule,
     HttpClientModule,
     SharedModule
   ]
 })
-export class AllGamesModule { }
+export class DetailPageModule { }

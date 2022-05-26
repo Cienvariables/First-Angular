@@ -1,8 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { GameInterface } from 'src/app/core/services/games/models/Igames';
+import { GameInterface, IGameResponse } from 'src/app/core/services/games/models/Igames';
 import { GamesService } from 'src/app/core/services/games/games.service';
-import { ActivatedRoute } from '@angular/router';
-import { HttpClientModule } from "@angular/common/http";
 import { Observable } from 'rxjs';
 
 @Component({
@@ -10,14 +8,22 @@ import { Observable } from 'rxjs';
   templateUrl: './all-games.component.html',
   styleUrls: ['./all-games.component.scss']
 })
+
 export class AllGamesComponent implements OnInit {
   public currentGame$?: Observable<GameInterface>;
+  public allGames: IGameResponse[];
 
-  constructor(private service: GamesService) { }
+  constructor(private service: GamesService) {
+    this.allGames = [];
+  }
+
   ngOnInit(): void {
-
     this.service.getAllGames().subscribe(data => {
-      console.log(data);
+      this.allGames = data;
     });
   }
+
 }
+
+
+

@@ -1,2 +1,15 @@
-<p>all-games works!</p>
-<!-- <p>{{data}}</p> -->
+<section class="card d-flex justify-content-center">
+
+  <div class="row row-cols-3 row-cols-sm-2 d-flex justify-content-center bd-highlight mb-2">
+    <div class="col m-1 card border bd-highlight" *ngFor="let juego of allGames">
+      <img class="card-img-top rounded-circle " [src]="juego.thumbnail" alt="background image" />
+      <div class="card-body d-flex bd-highlight ">
+        <h5 class="card-title flex-fill fs-10 bd-highlight">{{juego.title}}</h5>
+        <a [routerLink]="['/games', juego.id]">
+          <button class=" btn btn-success flex-fill bd-highlight">
+            <span>Más</span></button></a>
+      </div>
+    </div>
+  </div>
+
+</section>

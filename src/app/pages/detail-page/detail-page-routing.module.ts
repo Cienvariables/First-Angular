@@ -1,17 +1,16 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { HomePageComponent } from './home-page.component';
+import { CardComponent } from 'src/app/shared/components/card/card.component';
+import { DetailPageComponent } from './detail-page.component';
 
 const routes: Routes = [
   {
     path: '',
-    pathMatch: 'full',
-    component: HomePageComponent,
-  }
+    component: DetailPageComponent,
+  },
 ];
-
 @NgModule({
   imports: [RouterModule.forChild(routes)],
   exports: [RouterModule]
 })
-export class HomePageRoutingModule { }
+export class DetailPageRoutingModule { }
